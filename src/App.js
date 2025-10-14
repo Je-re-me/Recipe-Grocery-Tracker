@@ -16,7 +16,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-          MEATMEATMEATMEATMEAT
+          MEATMEATMEAT
         </a>
       </header>
     </div>
