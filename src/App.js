@@ -15,8 +15,6 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
-          MEATMEAT
         </a>
       </header>
     </div>
