@@ -1,5 +1,5 @@
 import './App.css';
-import Gemini from './Gemini.js';
+import Gemini from './components/Gemini.js';
 
 function App() {
   return (

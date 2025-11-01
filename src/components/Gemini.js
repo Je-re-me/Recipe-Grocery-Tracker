@@ -15,6 +15,10 @@ function Gemini() {
     e.preventDefault();
     const genai = new GoogleGenerativeAI(apiKey);
     const model = genai.getGenerativeModel({ model: "gemini-2.5-flash" });
+    
+    const beforePrompt = "You are a helpful assistant.";
+    model.setSystemPrompt(beforePrompt);
+
     const result = await model.generateContent(userInput);
     const res = await result.response;
     const text = await res.text();
