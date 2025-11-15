@@ -1,6 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import React, { useState, useEffect} from "react";
 import ReactMarkdown from "react-markdown";
+import initialPrompt from "./initialPrompt.txt";
 
 const apiKey = process.env.REACT_APP_API_KEY;
 
@@ -17,9 +18,7 @@ function Gemini() {
     const genai = new GoogleGenerativeAI(apiKey);
     const model = genai.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-    const prompt = "You are a helpful assistant that generates creative recipes based on user input. Please main";
-
-    const result = await model.generateContent(prompt + userInput);
+    const result = await model.generateContent(initialPrompt + userInput);
     const res = await result.response;
     const text = await res.text();
     setResponse(text);
